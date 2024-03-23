@@ -167,10 +167,10 @@ echo "PrivateKey = $(cat "${name}.key")" >> "${name}.conf"
 Next, add your server as peer for this client:
 
 ```plain
-[Peer]
-AllowedIPs = 10.100.0.1/32, fd08:4711::1/128
-Endpoint = [your public IP or domain]:47111
-PersistentKeepalive = 25
+echo "[Peer]
+echo "AllowedIPs = 10.100.0.1/32, fd08:4711::1/128" >> "${name}.conf"
+echo "Endpoint = [your public IP or domain]:47111" >> "${name}.conf"
+echo "PersistentKeepalive = 25" >> "${name}.conf"
 ```
 
 Then add the public key of the server as well as the PSK for this connection:
