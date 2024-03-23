@@ -167,7 +167,7 @@ echo "PrivateKey = $(cat "${name}.key")" >> "${name}.conf"
 Next, add your server as peer for this client:
 
 ```bash
-echo "[Peer]
+echo "[Peer]" >> "${name}.conf"
 echo "AllowedIPs = 10.100.0.1/32, fd08:4711::1/128" >> "${name}.conf"
 echo "Endpoint = [your public IP or domain]:47111" >> "${name}.conf"
 echo "PersistentKeepalive = 25" >> "${name}.conf"
